@@ -1,0 +1,59 @@
+.chat-main
+  .chat-header
+    .chat-header__left
+      .chat-header__left-group-name
+        techcamp
+      %ul.chat-header__left-group-member
+        Member：
+        %li.chat-header__left-group-member__name
+        jou
+        %li.chat-header__left-group-member__name
+        takashi
+        %li.chat-header__left-group-member__name
+        kanako
+    .chat-header__edit
+      = link_to "#", class: "chat-header__edit-name" do
+        edit
+
+  .messages
+    .chat-message
+      .chat-message__user
+        %p.chat-message__user-name
+          jou
+        %p.chat-message__user-time
+          2019/11/20(Wed)
+          %br
+          17:43:01
+      %p.chat-message__message
+        おはよう！
+
+    .chat-message
+      .chat-message__user
+        %p.chat-message__user-name
+          takashi
+        %p.chat-message__user-time
+          2019/11/21(Thu)
+          %br
+          20:00:15
+      %p.chat-message__message
+        おはようございます
+
+    .chat-message
+      .chat-message__user
+        %p.chat-message__user-name
+          kanako
+        %p.chat-message__user-time
+          2019/11/21(Thu)
+          %br
+          22:35:57
+      %p.chat-message__message
+        よろしくお願いします。
+      
+  .form
+    %form
+      %input.form__message
+      .form__mask
+        %label.form__mask__image
+          = icon('fa', 'image', class: 'icon')
+          %input.hidden{type: 'file'}
+    %input.form__submit{type: 'submit', value: 'Send'}

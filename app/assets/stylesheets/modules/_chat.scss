@@ -1,0 +1,103 @@
+.chat-main {
+  width: calc(100vw - 300px);
+  background-color: #ffffff;
+  .chat-header {
+    box-sizing: border-box;
+    height: 100px;
+    padding: 0 40px;
+    display: flex;
+    border-bottom: solid 1px #eee;
+    &__left {
+      margin-top: 35px;
+      &-group-name {
+        font-size: 20px;
+        color: #333333;
+      }
+      &-group-member {
+        font-size: 12px;
+        color: #999999;
+        margin-top: 15px;
+        display: flex;
+        &__name {
+          font-size: 12px;
+          color: #999999;
+          margin-left: 5px;
+        }
+      }
+    }      
+    .chat-header__edit {
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      border: solid 1px $light_blue;
+      position: absolute;
+      right: 40px;
+      .chat-header__edit-name {
+        color: $light_blue;
+        text-decoration: none;
+      }
+    }
+  }
+  .messages {
+    height: calc(100vh - 100px - 90px);
+      padding: 46px 40px;
+    .chat-message {
+      &__user {
+        margin: 35px 0 12px 0;
+        display: flex;
+        &-name {
+          color: #333333;
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 12px;
+        }
+        &-time {
+          color: #999999;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+      &__message {
+        color: #434A54;
+        font-size: 14px;
+        margin-bottom: 11px;
+      }
+    }
+  }
+  .form {
+    background-color: #ddd;
+    box-sizing: border-box;
+    height: 90px;
+    padding: 20px 50px 20px 40px;
+    &__message {
+      border: none;
+      float: left;
+      height: 50px;
+      width: calc(100% - 150px);
+    }
+    &__mask {
+      background-color: $white;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      &__image {
+        font-size: 20px;
+        line-height: 50px;
+      }
+      .hidden {
+        display: none;
+      }
+    }
+    &__submit {
+      background-color: $light_blue;
+      border: none;
+      color: $white;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+    }
+  }
+}
