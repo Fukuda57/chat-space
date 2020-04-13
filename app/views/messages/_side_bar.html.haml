@@ -1,0 +1,26 @@
+.side-bar
+  .side-header
+    .side-header__box
+      .side-header__user-name
+        jou
+      .side-header__main
+        %ul.top-items__icons
+          %li.top-items__icons-edit
+            = link_to "#", class: "contents-btn" do
+              = icon('far', 'edit', class: "top-items__edit")
+          %li.top-items__icons-cog
+            = link_to "#", class: "contents-btn" do
+              = icon('fa', 'cog', class: "top-items__cog")
+  .chat-groups
+    .group-name
+      techcamp
+    .group-message
+      まだメッセージがありません
+    .group-name
+      study-group
+    .group-message
+      まだメッセージがありません
+    .group-name
+      family-chat
+    .group-message
+      まだメッセージがありません
