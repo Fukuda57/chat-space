@@ -4,23 +4,19 @@
       .side-header__user-name
         = current_user.name
       .side-header__main
-        %ul.top-items__icons
-          %li.top-items__icons-edit
-            = link_to "#", class: "contents-btn" do
-              = icon('far', 'edit', class: "top-items__edit")
-          %li.top-items__icons-cog
-            = link_to edit_user_path(current_user), class: "contents-btn" do
-              = icon('fas', 'cog', class: "top-items__cog")
+        = link_to new_group_path do
+          %ul.top-items__icons
+            %li.top-items__icons-edit
+              = link_to new_group_path, class: "contents-btn" do
+                = icon('far', 'edit', class: "top-items__edit")
+            %li.top-items__icons-cog
+              = link_to edit_user_path(current_user), class: "contents-btn" do
+                = icon('fas', 'cog', class: "top-items__cog")
   .chat-groups
-    .group-name
-      techcamp
-    .group-message
-      まだメッセージがありません
-    .group-name
-      study-group
-    .group-message
-      まだメッセージがありません
-    .group-name
-      family-chat
-    .group-message
-      まだメッセージがありません
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group-name
+            = group.name
+          .group-message
+            メッセージはまだありません。
