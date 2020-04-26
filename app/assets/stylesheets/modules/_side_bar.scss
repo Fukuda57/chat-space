@@ -52,16 +52,19 @@
     height: 91px;
     width: calc(100% - 20px - 20px);
     margin: 0 auto;
-    .group-name {
-      color: $white;
-      font-size: $side_group_name;
-      margin-top: 20px;
-    }
-    .group-message {
-      color: $white;
-      font-size: $side_group_message;
-      margin-top: 5px;
-      
+    .group {
+      .group-name {
+        color: $white;
+        font-size: $side_group_name;
+        margin-top: 20px;
+        text-decoration: none;
+      }
+      .group-message {
+        color: $white;
+        font-size: $side_group_message;
+        margin-top: 5px;
+        text-decoration: none;
+      }
     }
   }
 }
