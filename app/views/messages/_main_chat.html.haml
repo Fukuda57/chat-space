@@ -13,17 +13,6 @@
 
   .messages
     = render @messages
-   
-    -# .chat-message
-    -#   .chat-message__user
-    -#     %p.chat-message__user-name
-    -#       takashi
-    -#     %p.chat-message__user-time
-    -#       2019/11/21(Thu)
-    -#       %br
-    -#       20:00:15
-    -#   %p.chat-message__message
-    -#     おはようございます
 
   .form
     = form_for [@group, @message] do |f|
