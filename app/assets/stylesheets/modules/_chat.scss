@@ -45,7 +45,6 @@
       overflow: scroll;
     .chat-message {
       &__user {
-        margin: 35px 0 12px 0;
         display: flex;
         &-name {
           color: #333333;
@@ -70,12 +69,13 @@
     background-color: #DDDDDD;
     box-sizing: border-box;
     height: 90px;
-    padding: 20px 50px 20px 40px;
+    padding: 20px 40px 20px 40px;
     &__message {
       border: none;
       float: left;
       height: 50px;
       width: calc(100% - 150px);
+      padding: 0 10px;
     }
     &__mask {
       background-color: $white;
@@ -92,7 +92,7 @@
     }
     &__submit {
       background-color: $light_blue;
-      border: none;
+      border: 1px;
       color: $white;
       float: right;
       font-size: 16px;
